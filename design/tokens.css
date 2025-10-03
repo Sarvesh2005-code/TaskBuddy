@@ -1,0 +1,64 @@
+/* 
+TaskBuddy Design System
+Author: bhushanzod
+Theme: Minimalist Exotic
+
+Color Palette:
+- Primary: Deep Teal (#006D77) - Headers, primary actions
+- Secondary: Sage (#83C5BE) - Secondary elements, hover states
+- Accent: Coral (#E29578) - Highlights, important actions
+- Background: Sand (#FFDDD2) - Light background
+- Surface: Pearl (#EDF6F9) - Cards, containers
+- Text: Deep Gray (#006466) - Main text
+*/
+
+:root {
+  /* Colors */
+  --color-primary: #006D77;
+  --color-primary-light: #83C5BE;
+  --color-secondary: #83C5BE;
+  --color-accent: #E29578;
+  --color-background: #FFDDD2;
+  --color-surface: #EDF6F9;
+  --color-text: #006466;
+
+  /* Status Colors */
+  --color-todo: var(--color-primary);
+  --color-doing: var(--color-accent);
+  --color-done: var(--color-secondary);
+
+  /* Typography */
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Borders */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+/* Dark theme (to be implemented) */
+[data-theme="dark"] {
+  --color-background: #1A1A1A;
+  --color-surface: #2D2D2D;
+  --color-text: #FFFFFF;
+}

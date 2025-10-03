@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TaskBuddy - Task Details</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .checkbox-custom:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10 border-b border-primary/20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+<h1 class="text-xl font-bold text-background-dark dark:text-background-light">TaskBuddy</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary transition-colors" href="#">My Tasks</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary transition-colors" href="#">Inbox</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary transition-colors" href="#">Calendar</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-background-dark/40 dark:text-background-light/40">search</span>
+<input class="pl-10 pr-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-background-dark dark:text-background-light placeholder:text-background-dark/40 dark:placeholder:text-background-light/40 border-none focus:ring-2 focus:ring-primary w-48 transition-all duration-300 focus:w-64" placeholder="Search" type="search"/>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-background-dark/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6bPsnr9NQAamNmuwQnuLNLKXjg_iFWC0qWLdsAqAnzGOwqaTWk8W0rEasccCrKCIJoeGNaaaNNiWJv1a88dr47umZyc4O5RnptN8vZWOyZN_BHfzlXo7j7_hVvbx3iGsJw-yVFHJ3sWgay4Y4Bi3dE610RcxqGqhqXZ-QSDp9eVSJHsdnQ17K1-hGYB9_7QvqcvI15fUMgIs49zseLy58bL8be4p93y3CSke0E2wFHPAJSg2o-ObSzkESJMj5df2H7UtP4Q0I4FlL");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<nav class="flex items-center gap-2 text-sm font-medium">
+<a class="text-primary/80 hover:text-primary" href="#">My Tasks</a>
+<span class="text-background-dark/40 dark:text-background-light/40">/</span>
+<span class="text-background-dark dark:text-background-light">Project Alpha</span>
+</nav>
+</div>
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-background-dark dark:text-background-light mb-2">Finalize Project Proposal</h2>
+<p class="text-background-dark/60 dark:text-background-light/60">Assigned to: <span class="font-semibold text-background-dark dark:text-background-light">Sarah Miller</span> | Due: <span class="font-semibold text-red-500">July 15, 2024</span></p>
+</div>
+<div class="space-y-8">
+<div class="bg-background-light dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10">
+<h3 class="text-lg font-semibold text-background-dark dark:text-background-light mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                            Description
+                        </h3>
+<p class="text-background-dark/80 dark:text-background-light/80">Complete the final draft of the project proposal, incorporating feedback from the team review. Ensure all sections are clear, concise, and aligned with the project objectives.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-semibold text-background-dark dark:text-background-light flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">checklist</span>
+                                Subtasks
+                            </h3>
+<button class="flex items-center gap-2 text-sm font-medium bg-primary/10 dark:bg-primary/20 text-primary px-4 py-2 rounded-lg hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-base">add</span>
+                                Add Subtask
+                            </button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<input class="checkbox-custom h-5 w-5 appearance-none rounded border-2 border-primary/40 bg-transparent checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary focus:outline-none transition-all" type="checkbox"/>
+<div class="flex-grow">
+<p class="font-medium text-background-dark dark:text-background-light">Incorporate Team Feedback</p>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Due: July 10, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<input class="checkbox-custom h-5 w-5 appearance-none rounded border-2 border-primary/40 bg-transparent checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary focus:outline-none transition-all" type="checkbox"/>
+<div>
+<p class="font-medium text-background-dark dark:text-background-light">Review with Stakeholders</p>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Due: July 12, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<input class="checkbox-custom h-5 w-5 appearance-none rounded border-2 border-primary/40 bg-transparent checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary focus:outline-none transition-all" type="checkbox"/>
+<div>
+<p class="font-medium text-background-dark dark:text-background-light">Final Proofread</p>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Due: July 14, 2024</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10">
+<h3 class="text-lg font-semibold text-background-dark dark:text-background-light mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">notes</span>
+                            Notes
+                        </h3>
+<div class="flex flex-col gap-4">
+<textarea class="w-full min-h-[120px] p-4 rounded-lg bg-primary/5 dark:bg-primary/10 text-background-dark dark:text-background-light placeholder:text-background-dark/40 dark:placeholder:text-background-light/40 border border-primary/20 focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Add a note..."></textarea>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 text-sm font-semibold bg-primary text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                                    Save Notes
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
