@@ -1,18 +1,37 @@
 # TaskBuddy
 
-TaskBuddy is a simple project management and task tracking tool.  
-This repo is for Git & GitHub TAE simulation, showing collaboration, branching, and workflow.
+TaskBuddy is a lightweight task management web app (MVP) that helps users create, edit, delete, and track tasks across three columns: To Do, Doing, and Done. This repository currently contains project documentation and planning artifacts; application code (frontend/backend) can be added under `/frontend` and `/backend`.
 
 ## Roles
-- **Sarvesh** → Product Manager, Frontend, Tester  
-- **Bhushan** → UI/UX Designer, Backend  
+- **Sarvesh** — Product Manager, Frontend, Tester
+- **Bhushan** — UI/UX Designer, Backend
 
-## Branching Strategy
-- `main` → stable release branch  
-- `develop` → active development branch  
-- `feature/*` → feature-specific branches (frontend, uiux, backend, tester)  
+## Tech stack (planned)
+- Frontend: React (Vite) + TailwindCSS
+- Backend: Node.js + Express
+- Storage: JSON file (MVP)
 
-## Workflow Demo
-- Each member works on their branch.  
-- Changes are merged into `develop`.  
-- Finally, `develop` is merged into `main`.
+## Quickstart (development)
+These are example steps; update paths if you scaffold `frontend/` and `backend/` folders.
+
+1. Install Node.js (v18+ recommended).
+2. Backend (if added):
+   - cd backend; npm install; npm run dev
+   - Server will listen on http://localhost:5000
+3. Frontend (if added):
+   - cd frontend; npm install; npm run dev
+   - Visit the Vite dev server URL (usually http://localhost:5173)
+
+## Branching & workflow
+- `main` — stable releases
+- `develop` — integration branch
+- `frontend/*`, `backend/*`, `uiux/*`, `tester/*` — feature branches
+
+PRs should target `develop`. Tag PRs with `feature`, `fix`, `docs`, or `test` and request at least one reviewer.
+
+## Project docs
+- `docs/product_manager_plan.md` — PM plan & acceptance criteria
+- `docs/project-plan.md` — project plan and roles
+
+## License
+MIT (add `LICENSE` file to declare)
