@@ -2,6 +2,10 @@
 
 TaskBuddy is a lightweight task management web app (MVP) that helps users create, edit, delete, and track tasks across three columns: To Do, Doing, and Done. This repository currently contains project documentation and planning artifacts; application code (frontend/backend) can be added under `/frontend` and `/backend`.
 
+---
+**Tester Note (Sarvesh):** This is a test change made on the tester branch for workflow validation.
+---
+
 ## Roles
 - **Sarvesh** — Product Manager, Frontend, Tester
 - **Bhushan** — UI/UX Designer, Backend
