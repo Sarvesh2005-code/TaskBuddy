@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #006D77;
+  --color-secondary: #83C5BE;
+  --color-accent: #E29578;
+  --color-background: #FFDDD2;
+  --color-surface: #EDF6F9;
+  --color-text: #006466;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-text font-sans m-0 min-h-screen;
+}
