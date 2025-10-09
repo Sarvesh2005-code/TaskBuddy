@@ -31,6 +31,12 @@ These are example steps; update paths if you scaffold `frontend/` and `backend/`
 - `develop` — integration branch
 - `frontend/*`, `backend/*`, `uiux/*`, `tester/*` — feature branches
 
+### V2 Collaboration Flow
+- Branches: `frontend/v2/*`, `backend/v2/*`, `docs/v2/*`
+- PRs target `develop` and require one reviewer from the other role
+- Conventional commit prefixes: `Frontend[Name]`, `Backend[Name]`, `Docs[Name]`, `Testing[Name]`
+- Keep scope simple (no auth); focus on localStorage FE and small BE utilities
+
 PRs should target `develop`. Tag PRs with `feature`, `fix`, `docs`, or `test` and request at least one reviewer.
 
 ## Project docs

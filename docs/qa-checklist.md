@@ -16,6 +16,8 @@ Use this checklist during testing and before merging PRs.
 - [ ] Add Task form validates inputs
 - [ ] Edit and Delete actions work
 - [ ] Frontend handles backend errors gracefully
+- [ ] Priority filter toggles list correctly (All/Low/Medium/High)
+- [ ] Clear-completed removes only Done tasks
 
 ## General
 - [ ] Responsive at 320px, 768px, 1024px

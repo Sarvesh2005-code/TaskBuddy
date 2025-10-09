@@ -21,10 +21,9 @@ Date: (update before handover)
    - Run frontend: `cd frontend; npm install; npm run dev`
 
 ## Outstanding items (recommended next steps)
-- Implement backend Express server and JSON persistence (owner: Bhushan)
-- Scaffold frontend with Vite + React + Tailwind (owner: Sarvesh)
-- Implement end-to-end integration and QA
-- Add unit tests for backend routes
+- v2: Add CODEOWNERS and CONTRIBUTING; keep CI simple (build FE, sanity-check BE)
+- v2: UI/UX design refresh doc; Frontend componentization and filters
+- v2: Backend `/version` endpoint; remain localStorage-first on FE
 
 ## Risks (summary)
 - JSON file concurrency and corruption — consider using a simple DB for production (SQLite/Postgres)
