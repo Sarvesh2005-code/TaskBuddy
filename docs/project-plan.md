@@ -35,6 +35,11 @@
 - `backend/*` → backend APIs  
 - `tester/*` → testing features  
 
+### V2 Addendum
+- Use `frontend/v2/*`, `backend/v2/*`, `docs/v2/*` branches
+- CODEOWNERS: backend → Bhushan; frontend/docs → Sarvesh
+- CI must pass before merge to `develop`
+
 ---
 
 ## Task Breakdown
