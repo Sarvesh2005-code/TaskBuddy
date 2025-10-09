@@ -58,6 +58,18 @@ TaskBuddy embraces a minimalist exotic theme, combining clean layouts with sophi
 4. Progress indicators
 5. Priority badges
 
+## V2 Design Refresh (Guidelines)
+- Spacing: Increase container padding to improve readability on desktop (16–24px)
+- Typography: Maintain Inter; use 700 for headings, 500 for key labels
+- Colors: Continue Minimalist Exotic palette; emphasize `--color-primary` for actions
+- States: Define hover/active/focus overlays using subtle elevation and border emphasis
+- Components:
+  - Header: sticky, subtle shadow
+  - AddTaskForm: 4-column responsive grid; clean validation states
+  - Columns: clear droppable affordance (border highlight on drag over)
+  - TaskCard: concise content hierarchy; action buttons visible on hover
+- Responsiveness: Single column at < 640px; two columns at >= 768px; three at >= 1024px
+
 ---
 Created by: bhushanzod
 Date: October 3, 2025
