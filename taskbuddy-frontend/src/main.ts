@@ -48,6 +48,8 @@ type Task = {
 
 const STORAGE_KEY = 'taskbuddy_tasks_v1'
 
+let currentFilter: 'All' | 'Low' | 'Medium' | 'High' = 'All'
+
 function readTasks(): Task[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -67,6 +69,7 @@ function createId() {
 
 function render() {
   const tasks = readTasks()
+  const visible = tasks.filter((t) => currentFilter === 'All' || t.priority === currentFilter)
   const columns: Record<Task['status'], HTMLElement> = {
     todo: document.getElementById('col-todo') as HTMLElement,
     inprogress: document.getElementById('col-inprogress') as HTMLElement,
@@ -74,14 +77,14 @@ function render() {
   }
   ;(['todo', 'inprogress', 'done'] as Task['status'][]).forEach((s) => (columns[s].innerHTML = ''))
 
-  for (const task of tasks) {
+  for (const task of visible) {
     const el = document.createElement('div')
     el.className = 'p-3 rounded-md border shadow-sm bg-white cursor-move'
     el.draggable = true
     el.dataset.id = task.id
     el.innerHTML = `
       <div class="flex items-start justify-between gap-3">
-  <div>
+        <div>
           <div class="font-medium">${escapeHtml(task.title)}</div>
           ${task.description ? `<div class="text-sm text-gray-600">${escapeHtml(task.description)}</div>` : ''}
           <div class="mt-1 text-xs"><span class="px-2 py-0.5 rounded bg-surface">${task.priority}</span></div>
@@ -89,9 +92,9 @@ function render() {
         <div class="flex gap-2">
           <button data-action="edit" class="text-primary text-sm">Edit</button>
           <button data-action="delete" class="text-red-600 text-sm">Delete</button>
-    </div>
-  </div>
-`
+        </div>
+      </div>
+    `
 
     // drag events
     el.addEventListener('dragstart', (e) => {
@@ -173,6 +176,38 @@ if (readTasks().length === 0) {
     { id: createId(), title: 'Implement API', description: 'Build CRUD routes', priority: 'High', status: 'inprogress' },
     { id: createId(), title: 'Setup Project', description: 'Init repo and docs', priority: 'Low', status: 'done' },
   ])
+}
+
+// filter controls
+const headerEl = document.querySelector('header') as HTMLElement
+if (headerEl) {
+  const controls = document.createElement('div')
+  controls.className = 'mt-3 flex items-center gap-3'
+  controls.innerHTML = `
+    <label class="text-sm">Filter:</label>
+    <select id="priority-filter" class="border rounded-md px-2 py-1">
+      <option>All</option>
+      <option>Low</option>
+      <option selected>Medium</option>
+      <option>High</option>
+    </select>
+    <button id="clear-completed" class="ml-2 text-sm px-3 py-1 rounded bg-red-600 text-white">Clear Completed</button>
+  `
+  headerEl.appendChild(controls)
+
+  const filterSelect = document.getElementById('priority-filter') as HTMLSelectElement
+  filterSelect.value = currentFilter
+  filterSelect.addEventListener('change', () => {
+    currentFilter = filterSelect.value as typeof currentFilter
+    render()
+  })
+
+  const clearBtn = document.getElementById('clear-completed') as HTMLButtonElement
+  clearBtn.addEventListener('click', () => {
+    const next = readTasks().filter((t) => t.status !== 'done')
+    writeTasks(next)
+    render()
+  })
 }
 
 render()
