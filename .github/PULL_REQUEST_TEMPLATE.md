@@ -9,6 +9,12 @@ Describe what this PR does and why.
 - [ ] docs
 - [ ] test
 
+## Role
+- [ ] Frontend (Sarvesh)
+- [ ] Backend (Bhushan)
+- [ ] UI/UX (Bhushan)
+- [ ] PM/Docs (Sarvesh)
+
 ## Related issues
 Link any related issues or tickets.
 
@@ -21,3 +27,4 @@ Link any related issues or tickets.
 - [ ] I have added relevant tests
 - [ ] All new and existing tests pass
 - [ ] I have updated documentation if needed
+- [ ] I verified local run (frontend builds, backend /health OK)
