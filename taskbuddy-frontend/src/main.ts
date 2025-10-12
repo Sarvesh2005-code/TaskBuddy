@@ -1,5 +1,7 @@
 import './style.css'
 
+// Updated main entry point with new features
+
 const appRoot = document.querySelector<HTMLDivElement>('#app')!
 
 appRoot.innerHTML = `
